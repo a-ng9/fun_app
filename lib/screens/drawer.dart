@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fun_app/Components/drawerList.dart';
+import 'package:fun_app/screens/payslip.dart';
 import 'package:fun_app/styles.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -56,60 +57,39 @@ class CustomDrawer extends StatelessWidget {
                 child: Column(
                   children: [
                     DrawerList(
-                      icon: Icon(
-                        Icons.home_outlined,
-                        color: Colors.white,
-                      ),
+                      icon: Icon(Icons.home_outlined, color: kDrawerIcon),
                       label: "Home",
                     ),
                     DrawerList(
-                      icon: Icon(
-                        Icons.beach_access_sharp,
-                        color: Colors.white,
-                      ),
+                      icon: Icon(Icons.beach_access_sharp, color: kDrawerIcon),
                       label: "Leaves",
                     ),
                     DrawerList(
-                      icon: Icon(
-                        Icons.description,
-                        color: Colors.white,
-                      ),
+                      icon: Icon(Icons.description, color: kDrawerIcon),
                       label: "Vacancies",
                     ),
                     DrawerList(
-                      icon: Icon(
-                        Icons.medical_services,
-                        color: Colors.white,
-                      ),
+                      icon: Icon(Icons.medical_services, color: kDrawerIcon),
                       label: "Medical Claim",
                     ),
                     DrawerList(
-                      icon: Icon(
-                        Icons.chat,
-                        color: Colors.white,
-                      ),
+                      icon: Icon(Icons.chat, color: kDrawerIcon),
                       label: "Talk to us",
                     ),
                     DrawerList(
-                      icon: Icon(
-                        Icons.timer,
-                        color: Colors.white,
-                      ),
+                      icon: Icon(Icons.timer, color: kDrawerIcon),
                       label: "Overtime",
                     ),
                     DrawerList(
-                      icon: Icon(
-                        Icons.format_list_bulleted,
-                        color: Colors.white,
-                      ),
+                      icon:
+                          Icon(Icons.format_list_bulleted, color: kDrawerIcon),
                       label: "Allowances",
                     ),
                     DrawerList(
-                      icon: Icon(
-                        Icons.payments,
-                        color: Colors.white,
-                      ),
+                      icon: Icon(Icons.payments, color: kDrawerIcon),
                       label: "Pay Slip",
+                      onPressed: () =>
+                          Navigator.pushNamed(context, PaySlipPage.id),
                     ),
                   ],
                 ),
@@ -121,10 +101,7 @@ class CustomDrawer extends StatelessWidget {
               color: Color.fromARGB(255, 255, 255, 255),
             ),
             DrawerList(
-              icon: Icon(
-                Icons.logout,
-                color: Colors.white,
-              ),
+              icon: Icon(Icons.logout, color: kDrawerIcon),
               label: "Log out",
             ),
           ],

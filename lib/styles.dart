@@ -16,4 +16,5 @@ class Styles {
   }
 }
 
-const kProfileText = TextStyle(color: Colors.white);
+const kProfileText = TextStyle(color: kDrawerIcon);
+const kDrawerIcon = Colors.white;
