@@ -11,6 +11,8 @@ class HomeContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: InkWell(
+        borderRadius: BorderRadius.all(Radius.circular(8.0)),
+        splashColor: Colors.black,
         onTap: onPressed,
         child: Padding(
           padding: const EdgeInsets.all(2.0),
@@ -19,12 +21,13 @@ class HomeContainer extends StatelessWidget {
               ShaderMask(
                 shaderCallback: (Rect bounds) {
                   return LinearGradient(
-                      begin: Alignment.centerLeft,
-                      end: Alignment.centerRight,
-                      colors: [
-                        Colors.white,
-                        Color.fromRGBO(1, 1, 1, .9),
-                      ]).createShader(bounds);
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                    colors: [
+                      Colors.white,
+                      Color.fromRGBO(1, 1, 1, .9),
+                    ],
+                  ).createShader(bounds);
                 },
                 child: Container(
                   decoration: BoxDecoration(

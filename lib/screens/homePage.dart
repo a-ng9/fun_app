@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:fun_app/screens/drawer.dart';
 import 'package:fun_app/Components/homeBottomButton.dart';
 import 'package:fun_app/counterPage.dart';
 import 'package:fun_app/Components/homeContainer.dart';
-// import 'package:fun_app/homeContainer.dart';
+import 'package:fun_app/styles.dart';
 
 class HomePage extends StatelessWidget {
   static const String id = "Home_screen";
@@ -10,6 +11,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: CustomDrawer(),
       appBar: AppBar(
         title: Text('Home Page'),
         actions: [
@@ -18,6 +20,7 @@ class HomePage extends StatelessWidget {
             onPressed: () => Navigator.pushNamed(context, CounterPage.id),
           )
         ],
+        flexibleSpace: Styles.gradientAppBar(),
       ),
       body: Container(
         width: double.infinity,
@@ -61,10 +64,9 @@ class HomePage extends StatelessWidget {
               },
             ),
             Row(
-              // crossAxisAlignment: CrossAxisAlignment.stretch,
-              // mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 WhiteButton(
+                  onPressed: () => print('Bottom button pressed'),
                   icon: Icon(
                     Icons.calendar_today,
                     color: Colors.deepPurple[800],
@@ -73,6 +75,7 @@ class HomePage extends StatelessWidget {
                   label: "Leaves",
                 ),
                 WhiteButton(
+                  onPressed: () => print('Bottom button pressed'),
                   icon: Icon(
                     Icons.contacts,
                     color: Colors.green[600],
@@ -81,6 +84,7 @@ class HomePage extends StatelessWidget {
                   label: "Directory",
                 ),
                 WhiteButton(
+                  onPressed: () => print('Bottom button pressed'),
                   icon: Icon(
                     Icons.free_breakfast,
                     color: Colors.pink[400],
@@ -89,6 +93,7 @@ class HomePage extends StatelessWidget {
                   label: "Cafeteria",
                 ),
                 WhiteButton(
+                  onPressed: () => print('Bottom button pressed'),
                   icon: Icon(
                     Icons.accessibility_new,
                     color: Colors.lightBlue[500],
@@ -98,7 +103,7 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 20)
+            SizedBox(height: 10)
           ],
         ),
       ),
