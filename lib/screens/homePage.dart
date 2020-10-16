@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fun_app/screens/drawer.dart';
 import 'package:fun_app/Components/homeBottomButton.dart';
-import 'package:fun_app/counterPage.dart';
+import 'package:fun_app/screens/counterPage.dart';
 import 'package:fun_app/Components/homeContainer.dart';
 import 'package:fun_app/styles.dart';
 

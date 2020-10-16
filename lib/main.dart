@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:fun_app/counterPage.dart';
+import 'package:fun_app/screens/counterPage.dart';
 import 'package:fun_app/screens/homePage.dart';
 
 void main() {
