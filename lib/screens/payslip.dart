@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fun_app/screens/drawer.dart';
 import 'package:fun_app/styles.dart';
 
 class PaySlipPage extends StatelessWidget {
@@ -6,6 +7,7 @@ class PaySlipPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: CustomDrawer(),
       appBar: AppBar(
         title: Text('Payslip'),
         flexibleSpace: Styles.gradientAppBar(),
@@ -36,19 +38,17 @@ class PaySlipPage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Gross Pay'),
-                      Text('Rs 10,000.00'),
+                      Text('Gross Pay', style: kPayslipCard),
+                      Text('Rs 10,000.00', style: kPayslipCard),
                       SizedBox(height: 20),
-                      Text('Deduction'),
-                      Text('Rs 10,000.00'),
+                      Text('Deduction', style: kPayslipCard),
+                      Text('Rs 10,000.00', style: kPayslipCard),
                     ],
                   ),
                 ),
                 Expanded(
                   child: Container(
-                    // margin: const EdgeInsets.all(20.0),
-                    height: 100,
-                    width: 100,
+                    padding: const EdgeInsets.symmetric(vertical: 20),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.all(
@@ -60,7 +60,7 @@ class PaySlipPage extends StatelessWidget {
                       children: [
                         Text('NetPay'),
                         SizedBox(height: 15),
-                        Text('Rs 35,000.00')
+                        Text('Rs 35,0000.00')
                       ],
                     ),
                   ),

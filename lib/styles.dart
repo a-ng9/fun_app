@@ -16,5 +16,9 @@ class Styles {
   }
 }
 
-const kProfileText = TextStyle(color: kDrawerIcon);
-const kDrawerIcon = Colors.white;
+//Drawer properties
+const kProfileText = TextStyle(color: Colors.white);
+const kDrawerIconLabel = Colors.white;
+
+//Payslip properties
+const kPayslipCard = TextStyle(color: Colors.white);
