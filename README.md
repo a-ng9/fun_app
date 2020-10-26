@@ -1,6 +1,6 @@
 # fun_app
 
-A new Flutter project.
+Exploring some UI capabilities for Flutter.
 
 ## Getting Started
 
